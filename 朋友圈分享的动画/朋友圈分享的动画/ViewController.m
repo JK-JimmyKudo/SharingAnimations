@@ -33,7 +33,9 @@
     publishView.delegate = self;
     [publishView show];
 }
-- (void)didSelecteBtnWithBtntag:(NSInteger)tag {
+
+
+-(void) didSelecteBtnWithBtntag:(NSInteger)tag buttonTitle:(NSString *)title{
     if (tag == 1) {
         NSLog(@"1");
     }else if (tag == 2) {
@@ -44,11 +46,12 @@
 }
 
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 @end
