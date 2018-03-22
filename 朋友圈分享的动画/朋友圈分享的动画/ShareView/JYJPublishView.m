@@ -16,6 +16,7 @@
 
 @property (nonatomic,strong) ShareSDKMethod *SDKMethod;
 
+@property (nonatomic,strong) NSArray *titleArray;
 @end
 
 
@@ -32,13 +33,13 @@
 
 - (void)createSubViews {
     
-    NSArray *imageArray = @[@"weixinShar",@"weixinFrindShar",@"weiboShar",@"share_qq",@"share_zone"];
-    NSArray *titleArray = @[@"微信",@"朋友圈",@"微博",@"QQ",@"qq"];
+    NSArray *imageArray = @[@"weixinShar",@"share_qq",@"weiboShar",@"weixinShar",@"weixinFrindShar",@"weiboShar",@"share_qq",@"share_zone"];
+   self.titleArray  = @[@"微信登录",@"QQ登录",@"微博登录",@"微信分享",@"朋友圈分享",@"微博分享",@"QQ分享",@"QQ空间分享"];
     CGFloat itemWidth = 60;
     CGFloat itemHeight = 90;
     CGFloat maigin = (WIDTH - 3*itemWidth)/4;
     NSInteger rowCount = 3;
-    CGFloat whiteViewHeight = (2)*(itemHeight + 10) + 45;
+    CGFloat whiteViewHeight = (3)*(itemHeight + 10) + 45;
     CGFloat whiteViewY = HEIGHT - whiteViewHeight;
     
     
@@ -50,7 +51,7 @@
 
     for (NSInteger i = 0;  i < imageArray.count;i++) {
         NSString *imageStr = imageArray[i];
-        NSString *titleStr = titleArray[i];
+        NSString *titleStr = self.titleArray[i];
         self.SDKMethod = [self btnAnimationWithFrame:CGRectMake(maigin + (i%rowCount) * (60 + maigin),whiteViewY +  24 + (i/rowCount)*(itemHeight+10), itemWidth, itemHeight) imageName:imageStr animationFrame:CGRectMake(maigin + (i%rowCount) * (60 + maigin),whiteViewY + 10 + (i/rowCount)*(itemHeight+10), itemWidth, itemHeight) delay:0.0];
         self.SDKMethod.shareBtn.tag = i;
         self.SDKMethod.shareLabel.tag = i;
@@ -107,7 +108,10 @@
 
 - (void)removeView:(UIButton *)btn {
     [self removeFromSuperview];
-    [self.delegate didSelecteBtnWithBtntag:btn.tag buttonTitle:[NSString stringWithFormat:@"%@",btn.titleLabel.text]];
+    
+//    NSLog(@"  btn.tag == %ld  text == %@",btn.tag,btn.titleLabel.text);    
+    NSString *text = self.titleArray[btn.tag];
+    [self.delegate didSelecteBtnWithBtntag:btn.tag buttonTitle:[NSString stringWithFormat:@"%@",text]];
 }
 // 点击白色View范围之外的执行的方法
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

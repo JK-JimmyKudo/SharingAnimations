@@ -31,6 +31,8 @@
 		088584102063A19400A7291E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0885840B2063A19400A7291E /* README.txt */; };
 		088584162063A1A900A7291E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 088584122063A1A900A7291E /* libWeiboSDK.a */; };
 		088584172063A1A900A7291E /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 088584142063A1A900A7291E /* WeiboSDK.bundle */; };
+		0885841A2063A39E00A7291E /* WTWXShareManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 088584192063A39E00A7291E /* WTWXShareManger.m */; };
+		0885841D2063A3B100A7291E /* WTWBShareManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0885841C2063A3B100A7291E /* WTWBShareManger.m */; };
 		08FBC0BD200373CC003D093B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BC200373CC003D093B /* AppDelegate.m */; };
 		08FBC0C0200373CC003D093B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BF200373CC003D093B /* ViewController.m */; };
 		08FBC0C3200373CC003D093B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FBC0C1200373CC003D093B /* Main.storyboard */; };
@@ -73,6 +75,10 @@
 		088584132063A1A900A7291E /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
 		088584142063A1A900A7291E /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		088584152063A1A900A7291E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		088584182063A39E00A7291E /* WTWXShareManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTWXShareManger.h; sourceTree = "<group>"; };
+		088584192063A39E00A7291E /* WTWXShareManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTWXShareManger.m; sourceTree = "<group>"; };
+		0885841B2063A3B100A7291E /* WTWBShareManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTWBShareManger.h; sourceTree = "<group>"; };
+		0885841C2063A3B100A7291E /* WTWBShareManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTWBShareManger.m; sourceTree = "<group>"; };
 		08FBC0B8200373CC003D093B /* 朋友圈分享的动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "朋友圈分享的动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FBC0BB200373CC003D093B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08FBC0BC200373CC003D093B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +131,10 @@
 				088583DE20639D7500A7291E /* UIView+LLAdd.m */,
 				088583EA20639F5F00A7291E /* WTQQShareManger.h */,
 				088583EB20639F5F00A7291E /* WTQQShareManger.m */,
+				088584182063A39E00A7291E /* WTWXShareManger.h */,
+				088584192063A39E00A7291E /* WTWXShareManger.m */,
+				0885841B2063A3B100A7291E /* WTWBShareManger.h */,
+				0885841C2063A3B100A7291E /* WTWBShareManger.m */,
 			);
 			path = ShareView;
 			sourceTree = "<group>";
@@ -301,8 +311,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FBC0C0200373CC003D093B /* ViewController.m in Sources */,
+				0885841D2063A3B100A7291E /* WTWBShareManger.m in Sources */,
 				088583EC20639F5F00A7291E /* WTQQShareManger.m in Sources */,
 				08FBC0CB200373CC003D093B /* main.m in Sources */,
+				0885841A2063A39E00A7291E /* WTWXShareManger.m in Sources */,
 				088583DA20639D3800A7291E /* ShareSDKMethod.m in Sources */,
 				08FBC0BD200373CC003D093B /* AppDelegate.m in Sources */,
 				088583E020639D7500A7291E /* UIView+LLAdd.m in Sources */,

@@ -36,12 +36,29 @@
 
 
 -(void) didSelecteBtnWithBtntag:(NSInteger)tag buttonTitle:(NSString *)title{
-    if (tag == 1) {
-        NSLog(@"1");
-    }else if (tag == 2) {
-        NSLog(@"2");
-    }else {
-        NSLog(@"CLOSE");
+    if ([title isEqualToString:@"微信登录"]) {
+        NSLog(@"微信登录");
+    }if ([title isEqualToString:@"QQ登录"]) {
+        NSLog(@"QQ登录");
+
+    }if ([title isEqualToString:@"微博登录"]) {
+        NSLog(@"微博登录");
+
+    }if ([title isEqualToString:@"微信分享"]) {
+        NSLog(@"微信分享");
+
+    }if ([title isEqualToString:@"朋友圈分享"]) {
+        NSLog(@"朋友圈分享");
+
+    }if ([title isEqualToString:@"微博分享"]) {
+        NSLog(@"微博分享");
+
+    }if ([title isEqualToString:@"QQ分享"]) {
+        NSLog(@"QQ分享");
+
+    }if ([title isEqualToString:@"QQ空间分享"]) {
+        NSLog(@"QQ空间分享");
+        
     }
 }
 

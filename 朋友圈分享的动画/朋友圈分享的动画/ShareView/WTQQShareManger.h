@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, WTLoginType) {
+    WTLoginTypeWeiBo = 0,   // 新浪微博
+    WTLoginTypeTencent,      // QQ
+    WTLoginTypeWeiXin       // 微信
+};
+
+typedef NS_ENUM(NSInteger, WTLoginWeiXinErrCode) {
+    WTErrCodeSuccess = 0,
+    WTErrCodeCancel = -2,
+};
+
 @interface WTQQShareManger : NSObject
 
 @end
