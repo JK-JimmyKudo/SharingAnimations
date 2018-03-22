@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088583DA20639D3800A7291E /* ShareSDKMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 088583D820639D3700A7291E /* ShareSDKMethod.m */; };
+		088583DD20639D6000A7291E /* JYJPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 088583DB20639D5F00A7291E /* JYJPublishView.m */; };
+		088583E020639D7500A7291E /* UIView+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 088583DE20639D7500A7291E /* UIView+LLAdd.m */; };
 		08FBC0BD200373CC003D093B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BC200373CC003D093B /* AppDelegate.m */; };
 		08FBC0C0200373CC003D093B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BF200373CC003D093B /* ViewController.m */; };
 		08FBC0C3200373CC003D093B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FBC0C1200373CC003D093B /* Main.storyboard */; };
 		08FBC0C5200373CC003D093B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FBC0C4200373CC003D093B /* Assets.xcassets */; };
 		08FBC0C8200373CC003D093B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FBC0C6200373CC003D093B /* LaunchScreen.storyboard */; };
 		08FBC0CB200373CC003D093B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0CA200373CC003D093B /* main.m */; };
-		08FBC0D3200373E7003D093B /* JYJPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0D2200373E7003D093B /* JYJPublishView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		088583D820639D3700A7291E /* ShareSDKMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSDKMethod.m; sourceTree = "<group>"; };
+		088583D920639D3800A7291E /* ShareSDKMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSDKMethod.h; sourceTree = "<group>"; };
+		088583DB20639D5F00A7291E /* JYJPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYJPublishView.m; sourceTree = "<group>"; };
+		088583DC20639D6000A7291E /* JYJPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYJPublishView.h; sourceTree = "<group>"; };
+		088583DE20639D7500A7291E /* UIView+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLAdd.m"; sourceTree = "<group>"; };
+		088583DF20639D7500A7291E /* UIView+LLAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLAdd.h"; sourceTree = "<group>"; };
 		08FBC0B8200373CC003D093B /* 朋友圈分享的动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "朋友圈分享的动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FBC0BB200373CC003D093B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08FBC0BC200373CC003D093B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,8 +35,6 @@
 		08FBC0C7200373CC003D093B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08FBC0C9200373CC003D093B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08FBC0CA200373CC003D093B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		08FBC0D1200373E7003D093B /* JYJPublishView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYJPublishView.h; sourceTree = "<group>"; };
-		08FBC0D2200373E7003D093B /* JYJPublishView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYJPublishView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088583D720639D2A00A7291E /* ShareView */ = {
+			isa = PBXGroup;
+			children = (
+				088583DC20639D6000A7291E /* JYJPublishView.h */,
+				088583DB20639D5F00A7291E /* JYJPublishView.m */,
+				088583D920639D3800A7291E /* ShareSDKMethod.h */,
+				088583D820639D3700A7291E /* ShareSDKMethod.m */,
+				088583DF20639D7500A7291E /* UIView+LLAdd.h */,
+				088583DE20639D7500A7291E /* UIView+LLAdd.m */,
+			);
+			path = ShareView;
+			sourceTree = "<group>";
+		};
 		08FBC0AF200373CC003D093B = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +80,11 @@
 		08FBC0BA200373CC003D093B /* 朋友圈分享的动画 */ = {
 			isa = PBXGroup;
 			children = (
+				088583D720639D2A00A7291E /* ShareView */,
 				08FBC0BB200373CC003D093B /* AppDelegate.h */,
 				08FBC0BC200373CC003D093B /* AppDelegate.m */,
 				08FBC0BE200373CC003D093B /* ViewController.h */,
 				08FBC0BF200373CC003D093B /* ViewController.m */,
-				08FBC0D1200373E7003D093B /* JYJPublishView.h */,
-				08FBC0D2200373E7003D093B /* JYJPublishView.m */,
 				08FBC0C1200373CC003D093B /* Main.storyboard */,
 				08FBC0C4200373CC003D093B /* Assets.xcassets */,
 				08FBC0C6200373CC003D093B /* LaunchScreen.storyboard */,
@@ -149,8 +167,10 @@
 			files = (
 				08FBC0C0200373CC003D093B /* ViewController.m in Sources */,
 				08FBC0CB200373CC003D093B /* main.m in Sources */,
-				08FBC0D3200373E7003D093B /* JYJPublishView.m in Sources */,
+				088583DA20639D3800A7291E /* ShareSDKMethod.m in Sources */,
 				08FBC0BD200373CC003D093B /* AppDelegate.m in Sources */,
+				088583E020639D7500A7291E /* UIView+LLAdd.m in Sources */,
+				088583DD20639D6000A7291E /* JYJPublishView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

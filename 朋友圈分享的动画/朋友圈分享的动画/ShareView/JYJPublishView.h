@@ -11,7 +11,7 @@
 // 代理方法  判断点击了那个button
 @protocol JYJPublishViewDelegate <NSObject>
 
-- (void)didSelecteBtnWithBtntag:(NSInteger)tag;
+- (void)didSelecteBtnWithBtntag:(NSInteger)tag  buttonTitle:(NSString *) title;
 
 @end
 
@@ -20,4 +20,5 @@
 @property (nonatomic, weak) id <JYJPublishViewDelegate> delegate;
 
 - (void)show;
+
 @end
