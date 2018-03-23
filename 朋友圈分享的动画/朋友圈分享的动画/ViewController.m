@@ -98,6 +98,13 @@
 
     }if ([title isEqualToString:@"微博登录"]) {
         NSLog(@"微博登录");
+        
+        [WTWBShareManger WT_LoginUserInfoWithWTQQType:WTWBLoginType result:^(NSDictionary *SuccessResult, NSString *error) {
+           
+            NSLog(@" SuccessResult == %@ ==",SuccessResult);
+            [self.third_image sd_setImageWithURL:[NSURL URLWithString:SuccessResult[@"third_image"]]];
+        }];
+        
 
     }if ([title isEqualToString:@"微信分享"]) {
         
@@ -118,7 +125,12 @@
         
 
     }if ([title isEqualToString:@"微博分享"]) {
-        NSLog(@"微博分享");
+        
+        [WTWBShareManger WT_shareWithContent:nil shareType:WTShareWBType shareResult:^(NSDictionary *SuccessResult, NSString *error) {
+           
+            NSLog(@"微博分享SuccessResult == %@",SuccessResult);
+
+        }];
 
     }if ([title isEqualToString:@"QQ分享"]) {
         NSLog(@"QQ分享");

@@ -11,7 +11,7 @@
 #import "WXApi.h"
 #import "WeiboSDK.h"
 #import "WTWXShareManger.h"
-
+#import "WTWBShareManger.h"
 
 @interface AppDelegate ()
 
@@ -41,7 +41,7 @@
     if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.sina.weibo"]) {
         NSLog(@"新浪微博~");
         
-//        return [WeiboSDK handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
+        return [WeiboSDK handleOpenURL:url delegate:[WTWBShareManger WeiBoShareManger]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.xin"]){
         
         return [WXApi handleOpenURL:url delegate:[WTWXShareManger WXShareManger ]];
@@ -62,8 +62,8 @@
     
     if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
         
-//        return [WeiboSDK handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
-        
+       
+        return [WeiboSDK handleOpenURL:url delegate:[WTWBShareManger WeiBoShareManger]];
     }else if ([sourceApplication isEqualToString:@"com.tencent.xin"]){
         
         return [WXApi handleOpenURL:url delegate:[WTWXShareManger WXShareManger ]];

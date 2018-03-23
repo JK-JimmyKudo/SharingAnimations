@@ -42,6 +42,10 @@ static WTWXShareManger * _instance;
     });
     return _instance;
 }
+
+
+
+
 // 注册app
 // 注册appid
 - (void)setRegisterApps
