@@ -8,7 +8,12 @@
 
 #import "AppDelegate.h"
 #import "WTQQShareManger.h"
+
+
+
+
 @interface AppDelegate ()
+
 
 @end
 
@@ -41,15 +46,17 @@
 //        return [WXApi handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.mqq"]){
         
-        //        [WTThirdPartyLoginManager didReceiveTencentUrl:url];
+         [WTQQShareManger didReceiveTencentUrl:url];
+         [QQApiInterface handleOpenURL:url delegate:[WTQQShareManger QQShareManger]];
         return [TencentOAuth HandleOpenURL:url];
     }
     return YES;
 }
+
 // iOS9 以下用这个方法接收
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    NSLog(@"%@",url);
+    NSLog(@"sourceApplication === %@",url);
     
     
     if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
@@ -61,8 +68,8 @@
 //        return [WXApi handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
         
     }else if ([sourceApplication isEqualToString:@"com.tencent.mqq"]){
-        
-        //        [WTShareManager didReceiveTencentUrl:url];
+        [WTQQShareManger didReceiveTencentUrl:url];
+        [QQApiInterface handleOpenURL:url delegate:[WTQQShareManger QQShareManger]];
         return [TencentOAuth HandleOpenURL:url];
     }
     

@@ -11,11 +11,14 @@
 #import "WTQQShareManger.h"
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
-
+#import "AppDelegate.h"
 
 
 @interface ViewController ()<JYJPublishViewDelegate>
 
+{
+    AppDelegate *appdelegate;
+}
 
 @property (nonatomic,strong) UIImageView *third_image;
 
@@ -33,7 +36,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     
     self.third_image = [[UIImageView alloc]init];
     self.third_image.frame = CGRectMake(100, 100, 200, 200);
@@ -67,7 +69,7 @@
     }if ([title isEqualToString:@"QQ登录"]) {
         NSLog(@"QQ登录");
         
-       [ WTQQShareManger GetUserInfoWithWTQQType:WTLoginTypeTencent result:^(NSDictionary *LoginResult, NSString *error) {
+       [ WTQQShareManger WT_LoginUserInfoWithWTQQType:WTLoginTypeTencent result:^(NSDictionary *LoginResult, NSString *error) {
            
            if (LoginResult) {
                
@@ -102,9 +104,25 @@
 
     }if ([title isEqualToString:@"QQ分享"]) {
         NSLog(@"QQ分享");
+        
+        
+        [WTQQShareManger WT_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSDictionary *LoginResult, NSString *error) {
+            
+            
+            NSLog(@"error === %@",error);
+
+        }];
+        
 
     }if ([title isEqualToString:@"QQ空间分享"]) {
         NSLog(@"QQ空间分享");
+        
+        [WTQQShareManger WT_shareWithContent:nil shareType:WTShareTypeQQZone shareResult:^(NSDictionary *LoginResult, NSString *error) {
+           
+            NSLog(@"error === %@",error);
+
+            
+        }];
         
     }
 }
@@ -114,6 +132,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 

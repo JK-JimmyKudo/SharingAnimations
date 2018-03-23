@@ -63,6 +63,7 @@
 		08EC009D2064D306003241B2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC008F2064D306003241B2 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		08EC009E2064D306003241B2 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC00912064D306003241B2 /* View+MASAdditions.m */; };
 		08EC009F2064D306003241B2 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC00942064D306003241B2 /* ViewController+MASAdditions.m */; };
+		08EC00A22064D902003241B2 /* WTShareContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC00A12064D902003241B2 /* WTShareContentItem.m */; };
 		08FBC0BD200373CC003D093B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BC200373CC003D093B /* AppDelegate.m */; };
 		08FBC0C0200373CC003D093B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BF200373CC003D093B /* ViewController.m */; };
 		08FBC0C3200373CC003D093B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FBC0C1200373CC003D093B /* Main.storyboard */; };
@@ -174,6 +175,8 @@
 		08EC00922064D306003241B2 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		08EC00932064D306003241B2 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		08EC00942064D306003241B2 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		08EC00A02064D902003241B2 /* WTShareContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTShareContentItem.h; sourceTree = "<group>"; };
+		08EC00A12064D902003241B2 /* WTShareContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTShareContentItem.m; sourceTree = "<group>"; };
 		08FBC0B8200373CC003D093B /* 朋友圈分享的动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "朋友圈分享的动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FBC0BB200373CC003D093B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08FBC0BC200373CC003D093B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 		088583D720639D2A00A7291E /* ShareView */ = {
 			isa = PBXGroup;
 			children = (
+				08EC00A02064D902003241B2 /* WTShareContentItem.h */,
+				08EC00A12064D902003241B2 /* WTShareContentItem.m */,
 				088583DC20639D6000A7291E /* JYJPublishView.h */,
 				088583DB20639D5F00A7291E /* JYJPublishView.m */,
 				088583D920639D3800A7291E /* ShareSDKMethod.h */,
@@ -497,6 +502,7 @@
 				08EC006B2064D2FB003241B2 /* SDImageCacheConfig.m in Sources */,
 				08EC009C2064D306003241B2 /* NSArray+MASAdditions.m in Sources */,
 				088583EC20639F5F00A7291E /* WTQQShareManger.m in Sources */,
+				08EC00A22064D902003241B2 /* WTShareContentItem.m in Sources */,
 				08EC009F2064D306003241B2 /* ViewController+MASAdditions.m in Sources */,
 				08EC00672064D2FB003241B2 /* MKAnnotationView+WebCache.m in Sources */,
 				08EC00962064D306003241B2 /* MASCompositeConstraint.m in Sources */,
