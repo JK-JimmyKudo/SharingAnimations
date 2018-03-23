@@ -64,6 +64,10 @@
 		08EC009E2064D306003241B2 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC00912064D306003241B2 /* View+MASAdditions.m */; };
 		08EC009F2064D306003241B2 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC00942064D306003241B2 /* ViewController+MASAdditions.m */; };
 		08EC00A22064D902003241B2 /* WTShareContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EC00A12064D902003241B2 /* WTShareContentItem.m */; };
+		08EC00A42064FEF9003241B2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EC00A32064FEF9003241B2 /* CFNetwork.framework */; };
+		08EC00A62064FF26003241B2 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EC00A52064FF26003241B2 /* libc++abi.tbd */; };
+		08EC00A8206500FB003241B2 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EC00A7206500FB003241B2 /* Photos.framework */; };
+		08EC00AA20650102003241B2 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EC00A920650102003241B2 /* PhotosUI.framework */; };
 		08FBC0BD200373CC003D093B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BC200373CC003D093B /* AppDelegate.m */; };
 		08FBC0C0200373CC003D093B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FBC0BF200373CC003D093B /* ViewController.m */; };
 		08FBC0C3200373CC003D093B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FBC0C1200373CC003D093B /* Main.storyboard */; };
@@ -177,6 +181,10 @@
 		08EC00942064D306003241B2 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		08EC00A02064D902003241B2 /* WTShareContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTShareContentItem.h; sourceTree = "<group>"; };
 		08EC00A12064D902003241B2 /* WTShareContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTShareContentItem.m; sourceTree = "<group>"; };
+		08EC00A32064FEF9003241B2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		08EC00A52064FF26003241B2 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		08EC00A7206500FB003241B2 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		08EC00A920650102003241B2 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		08FBC0B8200373CC003D093B /* 朋友圈分享的动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "朋友圈分享的动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FBC0BB200373CC003D093B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08FBC0BC200373CC003D093B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,6 +202,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08EC00AA20650102003241B2 /* PhotosUI.framework in Frameworks */,
+				08EC00A8206500FB003241B2 /* Photos.framework in Frameworks */,
+				08EC00A62064FF26003241B2 /* libc++abi.tbd in Frameworks */,
+				088584002063A07200A7291E /* libc++.tbd in Frameworks */,
+				08EC00A42064FEF9003241B2 /* CFNetwork.framework in Frameworks */,
 				088584082063A0D900A7291E /* Security.framework in Frameworks */,
 				0885840F2063A19400A7291E /* libWeChatSDK.a in Frameworks */,
 				088584062063A0CF00A7291E /* libiconv.tbd in Frameworks */,
@@ -203,7 +216,6 @@
 				088584022063A08E00A7291E /* CoreTelephony.framework in Frameworks */,
 				088583F420639FD200A7291E /* libstdc++.tbd in Frameworks */,
 				088583F620639FD900A7291E /* libz.tbd in Frameworks */,
-				088584002063A07200A7291E /* libc++.tbd in Frameworks */,
 				088583FE2063A06100A7291E /* QuartzCore.framework in Frameworks */,
 				088583F020639FC000A7291E /* ImageIO.framework in Frameworks */,
 				088583FC2063A05100A7291E /* CoreText.framework in Frameworks */,
@@ -262,6 +274,10 @@
 		088583E720639F3100A7291E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08EC00A920650102003241B2 /* PhotosUI.framework */,
+				08EC00A7206500FB003241B2 /* Photos.framework */,
+				08EC00A52064FF26003241B2 /* libc++abi.tbd */,
+				08EC00A32064FEF9003241B2 /* CFNetwork.framework */,
 				088584072063A0D900A7291E /* Security.framework */,
 				088584052063A0CF00A7291E /* libiconv.tbd */,
 				088584032063A0BD00A7291E /* CoreGraphics.framework */,
@@ -678,6 +694,10 @@
 					"$(PROJECT_DIR)/朋友圈分享的动画/ThridPart/OpenSDK1.8.1",
 					"$(PROJECT_DIR)/朋友圈分享的动画/ThridPart/libWeiboSDK",
 				);
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.3dov.3DVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -701,6 +721,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/朋友圈分享的动画/ThridPart/OpenSDK1.8.1",
 					"$(PROJECT_DIR)/朋友圈分享的动画/ThridPart/libWeiboSDK",
+				);
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.3dov.3DVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

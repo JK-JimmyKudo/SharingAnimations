@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "WTQQShareManger.h"
-
-
+#import "WXApi.h"
+#import "WeiboSDK.h"
+#import "WTWXShareManger.h"
 
 
 @interface AppDelegate ()
@@ -43,7 +44,7 @@
 //        return [WeiboSDK handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.xin"]){
         
-//        return [WXApi handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
+        return [WXApi handleOpenURL:url delegate:[WTWXShareManger WXShareManger ]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.mqq"]){
         
          [WTQQShareManger didReceiveTencentUrl:url];
@@ -65,7 +66,7 @@
         
     }else if ([sourceApplication isEqualToString:@"com.tencent.xin"]){
         
-//        return [WXApi handleOpenURL:url delegate:[WTThirdPartyLoginManager shareWTThirdPartyLoginManager]];
+        return [WXApi handleOpenURL:url delegate:[WTWXShareManger WXShareManger ]];
         
     }else if ([sourceApplication isEqualToString:@"com.tencent.mqq"]){
         [WTQQShareManger didReceiveTencentUrl:url];

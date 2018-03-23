@@ -12,7 +12,8 @@
 #import "Masonry.h"
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
-
+#import "WTWXShareManger.h"
+#import "WTWBShareManger.h"
 
 @interface ViewController ()<JYJPublishViewDelegate>
 
@@ -65,7 +66,18 @@
 
 -(void) didSelecteBtnWithBtntag:(NSInteger)tag buttonTitle:(NSString *)title{
     if ([title isEqualToString:@"微信登录"]) {
-        NSLog(@"微信登录");
+        
+        [WTWXShareManger WT_LoginUserInfoWithWTQQType:WTLoginTypeWeiXin result:^(NSDictionary *LoginResult, NSString *error) {
+            
+            NSLog(@"微信登录 === %@",LoginResult);
+
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:error delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:@"", nil];
+            [alertView show];
+            
+              [self.third_image sd_setImageWithURL:[NSURL URLWithString:LoginResult[@"third_image"]]];
+            
+        }];
+        
     }if ([title isEqualToString:@"QQ登录"]) {
         NSLog(@"QQ登录");
         
@@ -76,13 +88,7 @@
                NSLog(@"🐒🐒🐒🐒🐒🐒🐒🐒-----%@", LoginResult);
                
                [self.third_image sd_setImageWithURL:[NSURL URLWithString:LoginResult[@"third_image"]]];
-               
-//               self.userView.hidden = NO;
-//               self.userName.text = LoginResult[@"third_name"];
-//               NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:LoginResult[@"third_image"]]];
-//               self.userIcon.image = [UIImage imageWithData:data];
-               
-               
+
            }else{
                NSLog(@"%@",error);
            }
@@ -94,10 +100,22 @@
         NSLog(@"微博登录");
 
     }if ([title isEqualToString:@"微信分享"]) {
-        NSLog(@"微信分享");
+        
+        [WTWXShareManger WT_shareWithContent:nil shareType:WTShareTypeWeiXinSession shareResult:^(NSDictionary *LoginResult, NSString *error) {
+           NSLog(@"微信分享 == %@",LoginResult);
+            
+            
+            
+        }];
 
     }if ([title isEqualToString:@"朋友圈分享"]) {
         NSLog(@"朋友圈分享");
+        
+        [WTWXShareManger WT_shareWithContent:nil shareType:WTShareTypeWeiXinTimeline shareResult:^(NSDictionary *LoginResult, NSString *error) {
+            
+            NSLog(@"微信分享 == %@",LoginResult);
+        }];
+        
 
     }if ([title isEqualToString:@"微博分享"]) {
         NSLog(@"微博分享");
