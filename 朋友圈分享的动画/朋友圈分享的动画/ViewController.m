@@ -8,7 +8,23 @@
 
 #import "ViewController.h"
 #import "JYJPublishView.h"
+#import "WTQQShareManger.h"
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+
+
+
 @interface ViewController ()<JYJPublishViewDelegate>
+
+
+@property (nonatomic,strong) UIImageView *third_image;
+
+@property (nonatomic,strong) UILabel *third_name;
+
+@property (nonatomic,strong) UILabel *access_token;
+
+@property (nonatomic,strong) UILabel *third_id;
+
 
 @end
 
@@ -17,6 +33,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    
+    self.third_image = [[UIImageView alloc]init];
+    self.third_image.frame = CGRectMake(100, 100, 200, 200);
+    [self.view addSubview:self.third_image];
+    
+    
+    
+    
+    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:btn];
     btn.frame = CGRectMake(100, 100, 100, 40);
@@ -40,6 +66,27 @@
         NSLog(@"微信登录");
     }if ([title isEqualToString:@"QQ登录"]) {
         NSLog(@"QQ登录");
+        
+       [ WTQQShareManger GetUserInfoWithWTQQType:WTLoginTypeTencent result:^(NSDictionary *LoginResult, NSString *error) {
+           
+           if (LoginResult) {
+               
+               NSLog(@"🐒🐒🐒🐒🐒🐒🐒🐒-----%@", LoginResult);
+               
+               [self.third_image sd_setImageWithURL:[NSURL URLWithString:LoginResult[@"third_image"]]];
+               
+//               self.userView.hidden = NO;
+//               self.userName.text = LoginResult[@"third_name"];
+//               NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:LoginResult[@"third_image"]]];
+//               self.userIcon.image = [UIImage imageWithData:data];
+               
+               
+           }else{
+               NSLog(@"%@",error);
+           }
+            
+        }];
+        
 
     }if ([title isEqualToString:@"微博登录"]) {
         NSLog(@"微博登录");

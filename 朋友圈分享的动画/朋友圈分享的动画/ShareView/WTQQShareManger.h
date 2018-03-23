@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterfaceObject.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
-typedef NS_ENUM(NSInteger, WTLoginType) {
-    WTLoginTypeWeiBo = 0,   // 新浪微博
+typedef NS_ENUM(NSInteger, WTQQType) {
     WTLoginTypeTencent,      // QQ
-    WTLoginTypeWeiXin       // 微信
 };
 
 typedef NS_ENUM(NSInteger, WTLoginWeiXinErrCode) {
@@ -19,6 +20,20 @@ typedef NS_ENUM(NSInteger, WTLoginWeiXinErrCode) {
     WTErrCodeCancel = -2,
 };
 
-@interface WTQQShareManger : NSObject
+
+typedef void(^WTQQResultBlock)(NSDictionary * LoginResult, NSString * error);
+
+
+@interface WTQQShareManger : NSObject<TencentSessionDelegate, TencentLoginDelegate>
+
+
+@property (nonatomic, copy)WTQQResultBlock resultBlock;
+@property (nonatomic, assign)WTQQType wtLoginType;
+
+
++ (instancetype)QQShareManger;
+
++ (void)GetUserInfoWithWTQQType:(WTQQType)type result:(WTQQResultBlock)result;
+
 
 @end
